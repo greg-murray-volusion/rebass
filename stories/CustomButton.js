@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import { Button } from '../src'
@@ -9,9 +9,11 @@ const CustomButton = styled(Button)`
   box-shadow: 0 0 4px rgba(0, 0, 0, .25)
 `
 
+const displayName = { displayName: 'CustomButton' }
+
 storiesOf('Custom Button', module)
-  .add('Button', () => (
+  .addWithJSX('Button', () => (
     <CustomButton
       children='hello'
     />
-  ))
+  ), displayName)

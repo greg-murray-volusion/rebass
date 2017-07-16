@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { createProvider } from 'funcup'
 import {
@@ -50,7 +50,9 @@ const Live = hoc(props => (
   </Relative>
 ))
 
+const displayName = { displayName: 'Carousel' }
+
 storiesOf('Carousel', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Live />
-  ))
+  ), displayName)

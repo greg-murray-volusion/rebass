@@ -1,16 +1,18 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { ButtonOutline } from '../src'
 
+const displayName = { displayName: 'ButtonOutline' }
+
 storiesOf('ButtonOutline', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <ButtonOutline
       children='Hello'
     />
-  ))
-  .add('Colors', () => (
+  ), displayName)
+  .addWithJSX('Colors', () => (
     <ButtonOutline
       color='green'
       children='Hello'
     />
-  ))
+  ), displayName)

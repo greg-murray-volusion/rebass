@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { createProvider } from 'funcup'
 import { Donut, Slider } from '../src'
@@ -22,11 +22,13 @@ const Live = hoc(props => (
   </div>
 ))
 
+const displayName = { displayName: 'Donut' }
+
 storiesOf('Donut', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Live />
-  ))
-  .add('Sizes', () => (
+  ), displayName)
+  .addWithJSX('Sizes', () => (
     <div>
       <Donut
         value={1/2}
@@ -41,8 +43,8 @@ storiesOf('Donut', module)
         size={80}
       />
     </div>
-  ))
-  .add('Colors', () => (
+  ), displayName)
+  .addWithJSX('Colors', () => (
     <div>
       <Donut
         value={1/2}
@@ -57,4 +59,4 @@ storiesOf('Donut', module)
         color='green'
       />
     </div>
-  ))
+  ), displayName)

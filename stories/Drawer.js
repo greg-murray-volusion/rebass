@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { createProvider } from 'funcup'
 import {
@@ -38,18 +38,20 @@ const Live = hoc(props => (
   </div>
 ))
 
+const displayName = { displayName: 'Drawer' }
+
 storiesOf('Drawer', module)
-  .add('Left', () => (
+  .addWithJSX('Left', () => (
     <Live />
-  ))
-  .add('Right', () => (
+  ), displayName)
+  .addWithJSX('Right', () => (
     <Live position='right' />
-  ))
-  .add('Top', () => (
+  ), displayName)
+  .addWithJSX('Top', () => (
     <Live position='top' />
-  ))
-  .add('Bottom', () => (
+  ), displayName)
+  .addWithJSX('Bottom', () => (
     <Live position='bottom' />
-  ))
+  ), displayName)
 
 

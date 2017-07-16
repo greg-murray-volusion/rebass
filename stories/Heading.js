@@ -1,28 +1,30 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Heading } from '../src'
 
+const displayName = { displayName: 'Heading' }
+
 storiesOf('Heading', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Heading
       children='Hello'
     />
-  ))
-  .add('Center', () => (
+  ), displayName)
+  .addWithJSX('Center', () => (
     <Heading
       center
       children='Hello'
     />
-  ))
-  .add('Not bold', () => (
+  ), displayName)
+  .addWithJSX('Not bold', () => (
     <Heading
       bold={false}
       children='Hello'
     />
-  ))
-  .add('H1', () => (
+  ), displayName)
+  .addWithJSX('H1', () => (
     <Heading
       is='h1'
       children='Hello'
     />
-  ))
+  ), displayName)

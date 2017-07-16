@@ -1,11 +1,13 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Divider } from '../src'
 
+const displayName = { displayName: 'Divider' }
+
 storiesOf('Divider', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Divider />
-  ))
-  .add('Color', () => (
+  ), displayName)
+  .addWithJSX('Color', () => (
     <Divider color='blue4' />
-  ))
+  ), displayName)

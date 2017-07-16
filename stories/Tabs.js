@@ -1,9 +1,11 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Tabs, TabItem } from '../src'
 
+const displayName = { displayName: 'Tabs' }
+
 storiesOf('Tabs', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Tabs>
       <TabItem
         href='#!'
@@ -19,4 +21,4 @@ storiesOf('Tabs', module)
         children='Three'
       />
     </Tabs>
-  ))
+  ), displayName)

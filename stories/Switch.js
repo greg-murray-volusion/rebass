@@ -1,18 +1,20 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { createProvider } from 'funcup'
 import { Switch } from '../src'
 
+const displayName = { displayName: 'Switch' }
+
 storiesOf('Switch', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Switch />
-  ))
-  .add('Checked', () => (
+  ), displayName)
+  .addWithJSX('Checked', () => (
     <Switch checked />
-  ))
-  .add('Live', () => (
+  ), displayName)
+  .addWithJSX('Live', () => (
     <Live />
-  ))
+  ), displayName)
 
 const toggle = state => ({ checked: !state.checked })
 const hoc = createProvider({ checked: false })

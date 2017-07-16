@@ -1,16 +1,18 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Small } from '../src'
 
+const displayName = { displayName: 'Small' }
+
 storiesOf('Small', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Small
       children='Hello Small'
     />
-  ))
-  .add('Bold', () => (
+  ), displayName)
+  .addWithJSX('Bold', () => (
     <Small
       bold
       children='Hello Small'
     />
-  ))
+  ), displayName)

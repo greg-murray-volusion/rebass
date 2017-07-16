@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
   Heading,
@@ -11,8 +11,10 @@ import {
   Code
 } from '../src'
 
+const displayName = { displayName: 'Typography' }
+
 storiesOf('Typography', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <div>
       <Heading>Hello Heading</Heading>
       <Subhead>Hello Subhead</Subhead>
@@ -23,4 +25,4 @@ storiesOf('Typography', module)
       <Pre>Hello Pre</Pre>
       <Code>Hello Code</Code>
     </div>
-  ))
+  ), displayName)

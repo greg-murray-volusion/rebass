@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
   Media,
@@ -8,8 +8,10 @@ import {
 } from '../src'
 import { photo } from './constants'
 
+const displayName = { displayName: 'Media' }
+
 storiesOf('Media', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Media>
       <Image
         src={photo}
@@ -21,4 +23,4 @@ storiesOf('Media', module)
         <Text>Hello Media Object</Text>
       </Box>
     </Media>
-  ))
+  ), displayName)

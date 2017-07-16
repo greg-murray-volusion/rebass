@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
   Card,
@@ -7,19 +7,21 @@ import {
 } from '../src'
 import { photo } from './constants'
 
+const displayName = { displayName: 'Card' }
+
 storiesOf('Card', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Card
       children='Hello Card'
     />
-  ))
-  .add('Padded', () => (
+  ), displayName)
+  .addWithJSX('Padded', () => (
     <Card
       p={3}
       children='Hello Card'
     />
-  ))
-  .add('Image', () => (
+  ), displayName)
+  .addWithJSX('Image', () => (
     <Card w={256}>
       <BackgroundImage
         src={photo}
@@ -27,4 +29,4 @@ storiesOf('Card', module)
       <Subhead p={2}>Hello</Subhead>
     </Card>
 
-  ))
+  ), displayName)

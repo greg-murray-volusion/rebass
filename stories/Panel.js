@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
   Panel,
@@ -7,8 +7,10 @@ import {
   Box,
 } from '../src'
 
+const displayName = { displayName: 'Panel' }
+
 storiesOf('Panel', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Panel>
       <PanelHeader>Hello Panel</PanelHeader>
       <Box p={2}>
@@ -16,8 +18,8 @@ storiesOf('Panel', module)
       </Box>
       <PanelFooter>Footer</PanelFooter>
     </Panel>
-  ))
-  .add('Blue', () => (
+  ), displayName)
+  .addWithJSX('Blue', () => (
     <Panel color='blue'>
       <PanelHeader
         color='white'
@@ -31,4 +33,4 @@ storiesOf('Panel', module)
         Footer
       </PanelFooter>
     </Panel>
-  ))
+  ), displayName)

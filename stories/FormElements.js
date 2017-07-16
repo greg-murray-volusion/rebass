@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
   Label,
@@ -12,7 +12,7 @@ import {
 } from '../src'
 
 storiesOf('Form Elements', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <form>
       <Label>Input</Label>
       <Input defaultValue='Hello' />

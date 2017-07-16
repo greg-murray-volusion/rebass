@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
   ScrollCarousel,
@@ -6,8 +6,10 @@ import {
   Heading,
 } from '../src'
 
+const displayName = { displayName: 'ScrollCarousel' }
+
 storiesOf('ScrollCarousel', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <ScrollCarousel>
       <CarouselSlide
         py={6}
@@ -27,4 +29,4 @@ storiesOf('ScrollCarousel', module)
         <Heading>Hello</Heading>
       </CarouselSlide>
     </ScrollCarousel>
-  ))
+  ), displayName)

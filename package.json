@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@storybook/addon-options": "^3.1.6",
+    "@storybook/addons": "^3.1.6",
     "@storybook/react": "^3.1.7",
     "ava": "^0.20.0",
     "babel-cli": "^6.24.1",
@@ -43,7 +44,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
-    "react-x-ray": "^1.0.0-2"
+    "react-x-ray": "^1.0.0-2",
+    "storybook-addon-jsx": "^4.1.1"
   },
   "repository": {
     "type": "git",

@@ -1,17 +1,19 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Button, Arrow } from '../src'
 
+const displayName = { displayName: 'Arrow' }
+
 storiesOf('Arrow', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Arrow />
-  ))
-  .add('Up', () => (
+  ), displayName)
+  .addWithJSX('Up', () => (
     <Arrow direction='up' />
-  ))
-  .add('With Button', () => (
+  ), displayName)
+  .addWithJSX('With Button', () => (
     <Button>
       Hello
       <Arrow ml={2} />
     </Button>
-  ))
+  ), displayName)

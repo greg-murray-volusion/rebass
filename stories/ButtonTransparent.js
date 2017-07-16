@@ -1,10 +1,12 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { ButtonTransparent } from '../src'
 
+const displayName = { displayName: 'ButtonTransparent' }
+
 storiesOf('ButtonTransparent', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <ButtonTransparent
       children='Hello'
     />
-  ))
+  ), displayName)

@@ -1,9 +1,11 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Star, Flex, Text } from '../src'
 
+const displayName = { displayName: 'Star' }
+
 storiesOf('Star', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Flex>
       <Star checked />
       <Star checked />
@@ -11,4 +13,4 @@ storiesOf('Star', module)
       <Star half />
       <Star />
     </Flex>
-  ))
+  ), displayName)

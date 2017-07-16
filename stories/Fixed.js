@@ -1,17 +1,19 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Fixed } from '../src'
 
+const displayName = { displayName: 'Fixed' }
+
 storiesOf('Fixed', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Fixed
       children='Fixed'
     />
-  ))
-  .add('Bottom right', () => (
+  ), displayName)
+  .addWithJSX('Bottom right', () => (
     <Fixed
       bottom
       right
       children='Fixed'
     />
-  ))
+  ), displayName)

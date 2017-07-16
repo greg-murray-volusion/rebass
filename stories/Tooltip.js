@@ -1,9 +1,11 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Tooltip, Text, Flex, Relative } from '../src'
+import { Tooltip, Flex, Relative } from '../src'
+
+const displayName = { displayName: 'Tooltip' }
 
 storiesOf('Tooltip', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Flex>
       <Relative my={4}>
         <Tooltip text='Hello'>
@@ -11,4 +13,4 @@ storiesOf('Tooltip', module)
         </Tooltip>
       </Relative>
     </Flex>
-  ))
+  ), displayName)

@@ -1,8 +1,10 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Slider } from '../src'
 
+const displayName = { displayName: 'Slider' }
+
 storiesOf('Slider', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Slider />
-  ))
+  ), displayName)

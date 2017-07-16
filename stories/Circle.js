@@ -1,14 +1,16 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Circle } from '../src'
 
+const displayName = { displayName: 'Circle' }
+
 storiesOf('Circle', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Circle>
       16
     </Circle>
-  ))
-  .add('MTA', () => (
+  ), displayName)
+  .addWithJSX('MTA', () => (
     <div>
       <Circle bg='gray' children='L' />
       <Circle color='black' bg='yellow' children='N' />
@@ -18,4 +20,4 @@ storiesOf('Circle', module)
       <Circle bg='green' children='5' />
       <Circle bg='green' children='6' />
     </div>
-  ))
+  ), displayName)

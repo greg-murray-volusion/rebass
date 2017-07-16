@@ -2,13 +2,15 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Button } from '../src'
 
+const displayName = { displayName: 'Button' };
+
 storiesOf('Button', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Button
       children='Hello'
     />
-  ))
-  .add('Colors', () => (
+  ), displayName)
+  .addWithJSX('Colors', () => (
     <div>
       <Button
         m={1}
@@ -32,31 +34,31 @@ storiesOf('Button', module)
         children='Green'
       />
     </div>
-  ))
-  .add('Padding', () => (
+  ), displayName)
+  .addWithJSX('Padding', () => (
     <Button
       px={4}
       py={3}
       children='Hello'
     />
-  ))
-  .add('Big font', () => (
+  ), displayName)
+  .addWithJSX('Big font', () => (
     <Button
       f={3}
       children='Hello'
     />
-  ))
-  .add('Width', () => (
+  ), displayName)
+  .addWithJSX('Width', () => (
     <Button
       w={[ 1, 1/2 ]}
       children='Hello'
     />
-  ))
-  .add('Link', () => (
+  ), displayName)
+  .addWithJSX('Link', () => (
     <Button
       is='a'
       href='#!'
       children='Hello'
     />
-  ))
+  ), displayName)
 

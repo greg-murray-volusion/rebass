@@ -1,15 +1,17 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Avatar } from '../src'
 import { photo } from './constants'
 
+const displayName = { displayName: 'Avatar' }
+
 storiesOf('Avatar', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Avatar src={photo} />
-  ))
-  .add('Size 96', () => (
+  ), displayName)
+  .addWithJSX('Size 96', () => (
     <Avatar
       src={photo}
       size={96}
     />
-  ))
+  ), displayName)

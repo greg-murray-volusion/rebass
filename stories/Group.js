@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
   Group,
@@ -6,11 +6,13 @@ import {
   ButtonOutline
 } from '../src'
 
+const displayName = { displayName: 'Group' }
+
 storiesOf('Group', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Group>
       <Button children='Hello' />
       <ButtonOutline children='Hello' />
       <ButtonOutline children='Hello' />
     </Group>
-  ))
+  ), displayName)

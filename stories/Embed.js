@@ -1,9 +1,11 @@
-import React from 'react'
+﻿import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Embed } from '../src'
 
+const displayName = { displayName: 'Embed' }
+
 storiesOf('Embed', module)
-  .add('Default', () => (
+  .addWithJSX('Default', () => (
     <Embed>
       <iframe
         width="560"
@@ -13,5 +15,5 @@ storiesOf('Embed', module)
         allowfullscreen
       />
     </Embed>
-  ))
+  ), displayName)
 
